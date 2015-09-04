@@ -1,7 +1,7 @@
 ---
 layout: page
-title: we'll do it live
-tagline: Talk Radio
+title: 
+tagline: 
 description: 
 ---
 

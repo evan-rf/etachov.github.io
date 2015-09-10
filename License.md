@@ -1,1 +1,0 @@
-What is license(dot)tumblr(dot)com(?)

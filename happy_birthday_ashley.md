@@ -8,7 +8,7 @@ permalink: /happy_birthday_ashley/
 
 Dear Ashley, 
 
-While this passed year has been a lot of running in circles work and life-wise, I am always happy to be running the circles with you.
+While this last year has included a lot of running in circles work and life-wise, know that I am always happy to be running the circles with you.
 
 I have complete faith that this coming year will be a very good one for bear and can't wait to be there with you. I am also excited to celebrate this weekend and have two more presents for bear when you're here...
 

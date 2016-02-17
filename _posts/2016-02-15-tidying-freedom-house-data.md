@@ -3,7 +3,7 @@ layout:     post
 title:      Tidying Freedom of the Press Data
 date:       2016-02-15
 summary:    Making Freedom House's data easier to use
-categories: cleaning_data, media
+categories: munging
 ---
 
 Freedom House does a great of job collecting data on the state of

@@ -46,19 +46,7 @@ the .xlsx file.
 Reshaping the Wide Data Frame
 --------------------------------
 
-This raw file has one column for country and then columns to the right for each score-year combo:
-
-
-|country     |  A|  B|  C| SCORE|STATUS | A.1| B.1| C.1| SCORE.1|STATUS.1 |
-|:-----------|--:|--:|--:|-----:|:------|---:|---:|---:|-------:|:--------|
-|Afghanistan | NA| NA| NA|    NA|NA     |  24|  30|  20|      74|NF       |
-|Albania     | 24| 12| 12|    48|PF     |  20|  18|  12|      50|PF       |
-|Algeria     | 21| 26| 15|    62|NF     |  21|  24|  17|      62|NF       |
-|Andorra     | NA| NA| NA|    NA|NA     |   1|   1|   6|       8|F        |
-|Angola      | 21| 33| 25|    79|NF     |  20|  30|  22|      72|NF       |
-
-
-To make these data easier to use, we need to convert it into a long
+This raw file has one column for country and then columns to the right for each score-year combo. To make these data easier to use, we need to convert it into a long
 format where each combination of country, year and scores has its own
 row. To do this we'll use **reshape2::melt** to first melt the wide file
 down to a long file and **tidyr::gather** to gather the scores for each

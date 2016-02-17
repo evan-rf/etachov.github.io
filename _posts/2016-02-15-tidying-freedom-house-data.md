@@ -22,8 +22,8 @@ the cleaned data
 Downloading the Raw Data
 -------------------------
 
-To get the data into R, we'll use the <pre><code>downloader</code></pre> library to grab the
-file from Freedom House's website and the <pre><code>readxl</code></pre> library to import
+To get the data into R, we'll use the <code>downloader</code> library to grab the
+file from Freedom House's website and the <code>readxl</code> library to import
 the .xlsx file.
 
     library(downloader) # makes downloading from https easy
@@ -48,8 +48,8 @@ Reshaping the Wide Data Frame
 
 This raw file has one column for country and then columns to the right for each score-year combo. To make these data easier to use, we need to convert it into a long
 format where each combination of country, year and scores has its own
-row. To do this we'll use <pre><code>reshape2::melt</code></pre> to first melt the wide file
-down to a long file and <pre><code>tidyr::gather</code></pre> to gather the scores for each
+row. To do this we'll use <code>reshape2::melt</code> to first melt the wide file
+down to a long file and <code>tidyr::gather</code> to gather the scores for each
 country-year combo.
 
 

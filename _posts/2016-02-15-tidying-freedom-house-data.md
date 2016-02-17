@@ -31,7 +31,7 @@ the .xlsx file.
     #download the raw file from Freedom House's website into the current working directory
     download("https://freedomhouse.org/sites/default/files/FOTP2015%20Detailed%20Data%20and%20Subscores%201980-2015.xlsx", dest="fh_raw.xlsx", mode = "wb") 
 
-    library(readxl) # hadley wickham's very useful file for reading excel files into R
+    library(readxl) # dealing with excel files
     library(dplyr) # the data manipulation machete
 
     # read in the contents of the "Global" sheet
@@ -148,9 +148,9 @@ country-year combo.
       mutate(year.collected = rep(c(2001:2014), each = 5*210),
              year.reported = year.collected + 1) %>%
       rename(metric = variable, result = value) %>% 
-      # delete the extra info from the variable names using gsub and use tolower so our variable names are standardized
+      # delete the extra info from the variable names using gsub 
       mutate(metric = tolower(gsub("\\..*", "", metric))) %>%
-      # and finally spread it back out a bit so we have the subscores, final score and rating for each year-country combo
+      # and finally spread it back out
       spread(metric, result) %>%
       # convert the 
       mutate_each(funs(as.numeric), a, b, c, score)
@@ -236,14 +236,14 @@ And we're done:
 </tbody>
 </table>
 
+
+
 You can download the full data
 [here](https://github.com/etachov/tidying-freedom-of-the-press/blob/master/fotp_2001_2014.csv).
 
 Bonus Gif!
 ----------
 
-    ## [1] TRUE
-
-![](https://github.com/etachov/tidying-freedom-of-the-press/blob/master/fotp_2001_2014.gif)
+![](/images/fotp_2001_2014.gif)
 
 Notice how the bimodal distribution has converged in recent years.

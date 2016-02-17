@@ -19,7 +19,7 @@ with other data. If you don't care about the process, you can download
 the cleaned data
 [here](https://github.com/etachov/tidying-freedom-of-the-press/blob/master/fotp_2001_2014.csv).
 
-1. Downloading the Raw Data
+Downloading the Raw Data
 ---------------------------
 
 To get the data into R, we'll use the **downloader** library to grab the
@@ -43,96 +43,20 @@ the .xlsx file.
     # add a variable name  for the first column
     names(fh_raw)[1] <- "country"
 
-2. Reshaping the Wide Data Frame
+Reshaping the Wide Data Frame
 --------------------------------
 
-This raw file has one column for country and then columns to the right
-for each score-year combo:
+This raw file has one column for country and then columns to the right for each score-year combo:
 
-<table>
-<thead>
-<tr class="header">
-<th align="left">country</th>
-<th align="right">A</th>
-<th align="right">B</th>
-<th align="right">C</th>
-<th align="right">SCORE</th>
-<th align="left">STATUS</th>
-<th align="right">A.1</th>
-<th align="right">B.1</th>
-<th align="right">C.1</th>
-<th align="right">SCORE.1</th>
-<th align="left">STATUS.1</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Afghanistan</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="left">NA</td>
-<td align="right">24</td>
-<td align="right">30</td>
-<td align="right">20</td>
-<td align="right">74</td>
-<td align="left">NF</td>
-</tr>
-<tr class="even">
-<td align="left">Albania</td>
-<td align="right">24</td>
-<td align="right">12</td>
-<td align="right">12</td>
-<td align="right">48</td>
-<td align="left">PF</td>
-<td align="right">20</td>
-<td align="right">18</td>
-<td align="right">12</td>
-<td align="right">50</td>
-<td align="left">PF</td>
-</tr>
-<tr class="odd">
-<td align="left">Algeria</td>
-<td align="right">21</td>
-<td align="right">26</td>
-<td align="right">15</td>
-<td align="right">62</td>
-<td align="left">NF</td>
-<td align="right">21</td>
-<td align="right">24</td>
-<td align="right">17</td>
-<td align="right">62</td>
-<td align="left">NF</td>
-</tr>
-<tr class="even">
-<td align="left">Andorra</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="left">NA</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="right">6</td>
-<td align="right">8</td>
-<td align="left">F</td>
-</tr>
-<tr class="odd">
-<td align="left">Angola</td>
-<td align="right">21</td>
-<td align="right">33</td>
-<td align="right">25</td>
-<td align="right">79</td>
-<td align="left">NF</td>
-<td align="right">20</td>
-<td align="right">30</td>
-<td align="right">22</td>
-<td align="right">72</td>
-<td align="left">NF</td>
-</tr>
-</tbody>
-</table>
+
+|country     |  A|  B|  C| SCORE|STATUS | A.1| B.1| C.1| SCORE.1|STATUS.1 |
+|:-----------|--:|--:|--:|-----:|:------|---:|---:|---:|-------:|:--------|
+|Afghanistan | NA| NA| NA|    NA|NA     |  24|  30|  20|      74|NF       |
+|Albania     | 24| 12| 12|    48|PF     |  20|  18|  12|      50|PF       |
+|Algeria     | 21| 26| 15|    62|NF     |  21|  24|  17|      62|NF       |
+|Andorra     | NA| NA| NA|    NA|NA     |   1|   1|   6|       8|F        |
+|Angola      | 21| 33| 25|    79|NF     |  20|  30|  22|      72|NF       |
+
 
 To make these data easier to use, we need to convert it into a long
 format where each combination of country, year and scores has its own
@@ -140,8 +64,9 @@ row. To do this we'll use **reshape2::melt** to first melt the wide file
 down to a long file and **tidyr::gather** to gather the scores for each
 country-year combo.
 
+
     library(tidyr) 
-    library(reshape2) # for the melt function
+    library(reshape2) 
 
     fh_clean <- melt(fh_raw, id.vars = c("country")) %>% 
       # add variables for the year collected and the year reported
@@ -157,93 +82,26 @@ country-year combo.
 
     write.csv(fh_clean, "fotp_2001_2014.csv", row.names = F)
 
-And we're done:
 
-<table>
-<thead>
-<tr class="header">
-<th align="left">country</th>
-<th align="right">year.collected</th>
-<th align="right">year.reported</th>
-<th align="right">a</th>
-<th align="right">b</th>
-<th align="right">c</th>
-<th align="right">score</th>
-<th align="left">status</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Afghanistan</td>
-<td align="right">2001</td>
-<td align="right">2002</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="right">NA</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">Afghanistan</td>
-<td align="right">2002</td>
-<td align="right">2003</td>
-<td align="right">24</td>
-<td align="right">30</td>
-<td align="right">20</td>
-<td align="right">74</td>
-<td align="left">NF</td>
-</tr>
-<tr class="odd">
-<td align="left">Afghanistan</td>
-<td align="right">2003</td>
-<td align="right">2004</td>
-<td align="right">24</td>
-<td align="right">28</td>
-<td align="right">20</td>
-<td align="right">72</td>
-<td align="left">NF</td>
-</tr>
-<tr class="even">
-<td align="left">Afghanistan</td>
-<td align="right">2004</td>
-<td align="right">2005</td>
-<td align="right">21</td>
-<td align="right">27</td>
-<td align="right">20</td>
-<td align="right">68</td>
-<td align="left">NF</td>
-</tr>
-<tr class="odd">
-<td align="left">Afghanistan</td>
-<td align="right">2005</td>
-<td align="right">2006</td>
-<td align="right">21</td>
-<td align="right">28</td>
-<td align="right">20</td>
-<td align="right">69</td>
-<td align="left">NF</td>
-</tr>
-<tr class="even">
-<td align="left">Afghanistan</td>
-<td align="right">2006</td>
-<td align="right">2007</td>
-<td align="right">21</td>
-<td align="right">28</td>
-<td align="right">20</td>
-<td align="right">69</td>
-<td align="left">NF</td>
-</tr>
-</tbody>
-</table>
-
-
-
-You can download the full data
+And we're done. You can download the full data
 [here](https://github.com/etachov/tidying-freedom-of-the-press/blob/master/fotp_2001_2014.csv).
+
+
+|country     | year.collected| year.reported|  a|  b|  c| score|status |
+|:-----------|--------------:|-------------:|--:|--:|--:|-----:|:------|
+|Afghanistan |           2001|          2002| NA| NA| NA|    NA|NA     |
+|Afghanistan |           2002|          2003| 24| 30| 20|    74|NF     |
+|Afghanistan |           2003|          2004| 24| 28| 20|    72|NF     |
+|Afghanistan |           2004|          2005| 21| 27| 20|    68|NF     |
+|Afghanistan |           2005|          2006| 21| 28| 20|    69|NF     |
+|Afghanistan |           2006|          2007| 21| 28| 20|    69|NF     |
+
+
+
+
 
 Bonus Gif!
 ----------
 
 ![](/images/fotp_2001_2014.gif)
 
-Notice how the bimodal distribution has converged in recent years.

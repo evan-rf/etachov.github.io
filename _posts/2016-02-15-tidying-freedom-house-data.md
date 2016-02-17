@@ -20,7 +20,7 @@ the cleaned data
 [here](https://github.com/etachov/tidying-freedom-of-the-press/blob/master/fotp_2001_2014.csv).
 
 Downloading the Raw Data
----------------------------
+-------------------------
 
 To get the data into R, we'll use the **downloader** library to grab the
 file from Freedom House's website and the **readxl** library to import
@@ -44,7 +44,7 @@ the .xlsx file.
     names(fh_raw)[1] <- "country"
 
 Reshaping the Wide Data Frame
---------------------------------
+------------------------------
 
 This raw file has one column for country and then columns to the right for each score-year combo. To make these data easier to use, we need to convert it into a long
 format where each combination of country, year and scores has its own
@@ -73,20 +73,6 @@ country-year combo.
 
 And we're done. You can download the full data
 [here](https://github.com/etachov/tidying-freedom-of-the-press/blob/master/fotp_2001_2014.csv).
-
-
-|country     | year.collected| year.reported|  a|  b|  c| score|status |
-|:-----------|--------------:|-------------:|--:|--:|--:|-----:|:------|
-|Afghanistan |           2001|          2002| NA| NA| NA|    NA|NA     |
-|Afghanistan |           2002|          2003| 24| 30| 20|    74|NF     |
-|Afghanistan |           2003|          2004| 24| 28| 20|    72|NF     |
-|Afghanistan |           2004|          2005| 21| 27| 20|    68|NF     |
-|Afghanistan |           2005|          2006| 21| 28| 20|    69|NF     |
-|Afghanistan |           2006|          2007| 21| 28| 20|    69|NF     |
-
-
-
-
 
 Bonus Gif!
 ----------

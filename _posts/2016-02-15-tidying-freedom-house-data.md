@@ -15,7 +15,7 @@ independent media in the countries where we invest.
 The only issue is that the FOTP data is only available in as wide Excel
 file. In this post I'll describe how to download and manipulate the raw
 data into a tidy long file file, which can be easily analyzed or merged
-with other data. The full code in available [here](https://github.com/etachov/tidying-freedom-of-the-press/) and if you don't care about the process, you can download
+with other data. If you don't care about the process, you can download
 the cleaned data
 [here](https://github.com/etachov/tidying-freedom-of-the-press/blob/master/fotp_2001_2014.csv).
 
@@ -71,7 +71,7 @@ country-year combo.
     write.csv(fh_clean, "fotp_2001_2014.csv", row.names = F)
 
 
-And we're done. You can download the full data
+And we're done. The full code in available [here](https://github.com/etachov/tidying-freedom-of-the-press/) and you can download the full data
 [here](https://github.com/etachov/tidying-freedom-of-the-press/blob/master/fotp_2001_2014.csv).
 
 Bonus Gif!

@@ -4,4 +4,8 @@ title: About Evan
 permalink: /about/
 ---
 
-Hi my name is Evan Tachovsky and I am the research and analytics manager at  <a href = "http://www.mdif.org/" target = "_blank"> Media Development Investment Fund</a>. 
+Hi my name is Evan Tachovsky and I am data guy at  <a href = "http://www.mdif.org/" target = "_blank"> Media Development Investment Fund</a>. I also like maps and photos of geometry in nature. Get in touch on [Twitter](https://twitter.com/EvanTachovsky) or [Github](https://github.com/etachov).
+
+
+<iframe width="100%" height="500px" frameBorder="0" src="https://a.tiles.mapbox.com/v4/thac.kphl967o.html?access_token=pk.eyJ1IjoidGhhYyIsImEiOiJtOEgxY1c0In0.R0lZZADkH3i5mGKRgpXw0g"></iframe>
+*Roads, Rails and River: Cleveland, OH*

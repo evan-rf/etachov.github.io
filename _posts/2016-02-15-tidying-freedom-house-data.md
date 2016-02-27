@@ -71,7 +71,7 @@ country-year combo.
     write.csv(fh_clean, "fotp_2001_2014.csv", row.names = F)
 
 
-And we're done. The full code in available [here](https://github.com/etachov/tidying-freedom-of-the-press/) and you can download the full data
+And we're done. The code in available on [Github](https://github.com/etachov/tidying-freedom-of-the-press/) and you can download the full data
 [here](https://github.com/etachov/tidying-freedom-of-the-press/blob/master/fotp_2001_2014.csv).
 
 Bonus Gif!

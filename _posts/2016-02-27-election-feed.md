@@ -1,20 +1,21 @@
 ---
 layout:     post
-title:      When's the Next Election in Comoros? 
+title:      When is the Next Election in Comoros? 
 date:       2016-02-27
 summary:    Parsing a semi-hidden feed upcoming elections data
 categories: munging
 ---
 
 The International Foundation for Electoral Systems (IFES) does the
-incredible service of maintaining a calendar of upcoming elections on
+incredible service of maintaining a calendar of upcoming elections at
 [electionguide.org](http://www.electionguide.org/).
 
-Their search and filter UI is great if you're interested in a single country, but what if you want to check on 40 countries?
+The search and filter UI available on the site is great if you're interested in a single country, but what if you want to check on 40 countries?
 
 Thankfully there's an straightforward way to do this with R.
 
-IFES maintains a (little advertised) RSS feed, which we can access, parse into a data.frame, and subset by a of list countries. The full code is available on [Github](https://github.com/etachov/election-feedr) and I walk through the steps below:
+IFES maintains a (little advertised) RSS feed that we can parse into a data.frame and subset to look at our countries of interest--in this case the island nation of Comoros. The full code is available on [Github](https://github.com/etachov/election-feedr) and I walk through the steps below:
+
 
 **1. Find the feed:**
 
@@ -22,9 +23,10 @@ When I first visited electionguide.org, I missed the RSS feed because it's only 
 
 I ultimaetly located the feed by searching "RSS site:electionguide.org".
 
+
 **2. Parse the XML:**
 
-RSS feeds are XML data so we'll use the R <code>XML</code> package to parse the feed into an XMLInternalDocument and extract node data using a simple helper function. For more details on XML and R, check out this [great presentation](http://gastonsanchez.com/stat133/slides/33-parsing-xml/33-parsing-xml.pdf) by [Gaston Sanchez](http://gastonsanchez.com/).
+RSS feeds are XML data so we'll use the R <code>XML</code> package to parse the feed into an R data type called <code>XMLInternalDocument</code> and extract data from the document using a simple helper function. For more details on XML and R, check out this [great presentation](http://gastonsanchez.com/stat133/slides/33-parsing-xml/33-parsing-xml.pdf) by [Gaston Sanchez](http://gastonsanchez.com/).
 
     library(dplyr) # general data manipulation
     library(XML) # parse the xml feed
@@ -45,12 +47,12 @@ RSS feeds are XML data so we'll use the R <code>XML</code> package to parse the 
      ## apply the function to the list of nodes and turn the result into a data.frame
     elect_raw <- as.data.frame(lapply(node_list, nodeGet)) 
 
-     ## set the names using the original list
+     ## set the variable names using the original list
     names(elect_raw) <- gsub("//item/", "", node_list)
 
 **3. Clean and subset for countries of interest:**
 
-This leaves us with a messy data.frame that we'll clean up using <code>dplyr</code> and regular expressions. Once you have the tidy data.frame you can subset by a vector of countries and write it out as a .csv file or upload it to Google Sheets with the very helpful <code>googlesheets</code> package from [Jenny Bryan](https://github.com/jennybc/googlesheets)
+This leaves us with a messy data.frame that we'll clean up using <code>dplyr</code> and regular expressions. Once we have the tidy data.frame that we can subset by a vector of countries and save as needed. 
 
      ## clean up the data with some regex and dplyr
     elect <- elect_raw %>%
@@ -65,11 +67,11 @@ This leaves us with a messy data.frame that we'll clean up using <code>dplyr</co
 
 
      ## subset the list by a vector of countries if you have a specific focus: 
-    countries_interest <- countrycode(c("Comoros", "Zambia", "United Kingdom"), "country.name", "iso3c")
+    countries_interest <- countrycode(c("Comoros"), "country.name", "iso3c")
 
     elect %>%
       filter(iso3c %in% countries_interest)
 
-I use this script to keep tabs on elections in countries where <a href = "http://www.mdif.org" target = "_blank">MDIF</a> has investments. When an election takes place, we evaluate how our client's coverage compares with other media sources visualize the results results on our <a href = "http://www.mdif.org/client-election-coverage/" target = "_blank">Election StoryMap</a>.
+I use this script to keep tabs on elections in countries where <a href = "http://www.mdif.org" target = "_blank">my organization</a> has investments. When an election takes place, we evaluate how our investee's coverage compares with other media sources visualize the results results on our <a href = "http://www.mdif.org/client-election-coverage/" target = "_blank">Election StoryMap</a>.
 
 Finally, for those that read all this way, Comoros' next election (as of this post) is a [presidential contest](https://en.wikipedia.org/wiki/Comorian_presidential_election,_2016) in April.

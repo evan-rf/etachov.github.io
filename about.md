@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Evan
+title: 
 permalink: /about/
 ---
 

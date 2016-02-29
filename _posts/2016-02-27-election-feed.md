@@ -2,7 +2,7 @@
 layout:     post
 title:      When is the Next Election in Comoros? 
 date:       2016-02-27
-summary:    Parsing a semi-hidden feed upcoming elections data from the International Foundation for Electoral Systems (IFES)
+summary:    Parsing a semi-hidden feed of upcoming elections data from the International Foundation for Electoral Systems (IFES)
 categories: munging
 ---
 

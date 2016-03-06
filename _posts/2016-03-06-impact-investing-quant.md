@@ -9,7 +9,7 @@ categories: impinv
 Recently a friend asked for advice on what to look for when hiring a quantitative person for their <a href = "https://thegiin.org/impact-investing" target = "_blank"> impact investing</a> organization. Here’s what I recommended:
 
 
-1. Empathy Grounded in Experience
+Empathy Grounded in Experience
 ---------------------------------
 
 An ideal candidate will have experience both as a producer and consumer of data. In other words, they should understand what it’s like to request data from busy entrepreneurs and also what it’s like to be the busy entrepreneur. 
@@ -19,14 +19,14 @@ An ideal candidate will have experience both as a producer and consumer of data.
 * Tell me about the last time you requested a large amount of data from someone. How did you ask? Were they able to provide the data on time? (If not, why not?) 
 * Tell me about a time someone asked you for data you couldn’t provide. How did you respond?
 
-2. Editorial Mindset
+Editorial Mindset
 ---------------------
 
 To be an effective impact investing quant, you need to think like a good editor. This means asking the right questions, quickly understanding how disparate facts connect to form the big picture, and eliminating distractions to get at what matters. 
 
 ***Evaluation Strategy***: Ask the applicant to design a short survey to evaluate a specified outcome. Once they’ve written the survey, discuss the logic behind their question choices. The goal here is to see if they can take an abstract problem and drill down to clear and reasonable questions.
 
-3. Quantitative Analysis and Presentation Skills
+Quantitative Analysis and Presentation Skills
 ------------------------------------------------
 
 Surprise! An impact investing quant needs to have strong data analysis and presentation skills. There’s no single profile but at a minimum the applicants should have the following: 

@@ -6,7 +6,7 @@ summary:    So you need to hire a data scientist, impact manager, or quantitativ
 categories: impinv
 ---
 
-Recently a friend asked for advice on what to look for when hiring a quantitative person for their <a href = "https://thegiin.org/impact-investing" target = "_blank"> impact investing</a> organization. Here’s what I recommended:
+Recently a friend asked for advice on what to look for when hiring a quantitative person for their <a href = "https://thegiin.org/impact-investing" target = "_blank"> impact investing</a> organization. Here are the qualifications I recommend:
 
 
 Empathy Grounded in Experience

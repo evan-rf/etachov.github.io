@@ -26,7 +26,7 @@ I ultimaetly located the feed by searching "RSS site:electionguide.org".
 **2. Parse the XML:**
 ----------------------
 
-RSS feeds are XML data so we'll use the R <code>[XML](https://cran.r-project.org/web/packages/XML/XML.pdf)</code> package to parse the feed into an R data type called <code>[XMLInternalDocument](http://www.inside-r.org/node/84916)</code> and extract data from the document using a simple helper function. For more details on XML and R, check out this <a href="http://gastonsanchez.com/stat133/slides/33-parsing-xml/33-parsing-xml.pdf" target="_blank">great presentation</a>by <a href="http://gastonsanchez.com/" target="_blank">Gaston Sanchez</a>.
+RSS feeds are XML data so we'll use the R <a href = "https://cran.r-project.org/web/packages/XML/XML.pdf" target = "_blank">XML</a> package to parse the feed into an R data type called <a href = "http://www.inside-r.org/node/84916" target = "_blank">XMLInternalDocument</a> and extract data from the document using a simple helper function. For more details on XML and R, check out this <a href="http://gastonsanchez.com/stat133/slides/33-parsing-xml/33-parsing-xml.pdf" target="_blank">great presentation</a>by <a href="http://gastonsanchez.com/" target="_blank">Gaston Sanchez</a>.
 
     library(dplyr) # general data manipulation
     library(XML) # parse the xml feed

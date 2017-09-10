@@ -29,4 +29,5 @@ radialNetwork(iris_clusters,
 
 ```
 
-<iframe width="420" height="315" src="http://etachov.github.io/polar_dendrogram.html" frameborder="0" allowfullscreen></iframe>
+
+![](/images/polar_dendrogram.png)

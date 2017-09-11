@@ -14,6 +14,7 @@ categories: photo
 library(tidyverse)
 library(networkD3)
 
+
 iris_clusters <- iris %>%
   select(Sepal.Length:Petal.Width) %>%
   dist() %>%
@@ -30,4 +31,4 @@ radialNetwork(iris_clusters,
 ```
 
 
-![](/images/polar_dendrogram.png)
+<iframe width='100%' height='400px' frameBorder='0' src='http://etachov.github.io/polar_dendrogram.html'></iframe>

@@ -8,9 +8,9 @@ Hi my name is Evan Tachovsky and I am a data guy working for <a href = "https://
 
 Right now I'm working on three projects: 
 
-* Understanding the longitudinal effects of algorithms on society, <a href = "http://beltmag.com/the-legacy-of-redlining-in-rust-belt-cities/" target = "_blank">for example</a>.
+* Understanding the longitudinal effects of algorithms in society, <a href = "http://beltmag.com/the-legacy-of-redlining-in-rust-belt-cities/" target = "_blank">for example</a>.
 * Translating between the math present in the digital and physical worlds, <a href = "http://etachov.github.io/photo/2017/08/27/polar-dendrogram/" target = "_blank">for example</a>.
-* Researching how folk metrics--mathematical rules of thumb used to understand complex systems--evolve and influence communication online, <a href = "https://etachov.shinyapps.io/Twitter_Tern/" target = "_blank">for example</a>.
+* Researching how folk metrics--rules of thumb used to understand complex systems--evolve and influence communication online, <a href = "https://etachov.shinyapps.io/Twitter_Tern/" target = "_blank">for example</a>.
 
 
 Get in touch [here](http://etachov.github.io/contact/) or find me on <a href = "https://twitter.com/EvanTachovsky" target = "_blank">Twitter</a>.

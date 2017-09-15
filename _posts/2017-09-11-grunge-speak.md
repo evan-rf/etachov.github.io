@@ -2,9 +2,10 @@
 layout:     post
 title:      Grunge Speak
 date:       2017-09-14
-summary:    
+summary:    Makes you think  
 categories: reading
 ---
+
 
 **bloated, big bag of bloatation** – drunk
 

@@ -2,12 +2,13 @@
 layout:     post
 title:      Mystery Science Computer Vision
 date:       2017-09-17
-summary:    Watching movie with AI
+summary:    Watching movies with AI
 categories: AI on AI
 ---
 
 ![](/images/rat_film_thoughts_optimized.gif)
 
+TLDR: Go see [Rat Film](https://memory.is/rat-film/) in theaters now
 
 ```R
 

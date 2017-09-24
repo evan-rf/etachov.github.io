@@ -2,13 +2,15 @@
 layout:     post
 title:      Mystery Science Computer Vision
 date:       2017-09-17
-summary:    Watching movies with AI
+summary:    Cozy up and watch a movie with CV
 categories: AI on AI
 ---
 
 ![](/images/rat_film_thoughts_optimized.gif)
+* Film runtime is on the x-axis, the algorithm guess confidence is on the y-axis
 
-TLDR: Go see [Rat Film](https://memory.is/rat-film/) in theaters now
+In honor of [Rat Film's](https://memory.is/rat-film/) theatrical release, I showed 100 stills from the film to [Google's Cloud Vision API](https://cloud.google.com/vision/). Cloud Vision tried to identify objects in the stills. I took its three best guesses for each image and created the gif above with [gganimate](https://github.com/dgrtwo/gganimate).
+
 
 ```R
 
@@ -38,7 +40,7 @@ labeleR <- function(directory, file_name) {
   return(dat)
 }
 
-## a folder of images with ordered files names, e.g. screenshot_1, screenshot_2
+## a folder of images with ordered files names, e.g. image_t1, image_t2
 image_directory <- "/Images/"
 
 # generate a list of files the directory
@@ -63,7 +65,7 @@ p <- ggplot(rat_film_desc, aes(x = index, y = score, label = description)) +
   theme(plot.background = element_rect(fill = "black"), 
         plot.title = element_text(color = "white", size = 50, family = "mono", face = "bold", hjust = 0.5)) 
 
-
+## animate the plot
 gganimate(p, "rat_film_thoughts.gif", 
           interval = .2, 
           ani.width = 800, 

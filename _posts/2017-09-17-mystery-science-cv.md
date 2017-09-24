@@ -7,7 +7,7 @@ categories: AI on AI
 ---
 
 ![](/images/rat_film_thoughts_optimized.gif)
-* Film runtime is on the x-axis, the algorithm guess confidence is on the y-axis *
+*Film runtime is on the x-axis, the algorithm guess confidence is on the y-axis*
 
 In honor of [Rat Film's](https://memory.is/rat-film/) theatrical release, I showed 100 stills from the movie to [Google's Cloud Vision API](https://cloud.google.com/vision/). Cloud Vision tried to identify objects in the stills. I took its three best guesses for each image and created the gif above with [gganimate](https://github.com/dgrtwo/gganimate).
 

@@ -1,5 +1,5 @@
 // Typography
-$base-font-size: 14px !default;
+$base-font-size: 12px !default;
 $bold-font-weight: bold !default;
 $font-family: 'Merriweather', 'PT Serif', Georgia, 'Times New Roman', serif !default;
 $line-height: 1.5 !default;
@@ -33,6 +33,7 @@ $viewport-large: 64em;
 
 // Colors
 $blue: #0076df !default;
+$steel: #4682B4 !default;
 $coral: #F08080 !default;
 $red: #f95020 !default;
 $green: #00cf26 !default;
@@ -54,8 +55,8 @@ $darken-3: rgba(#000,.25) !default;
 $darken-4: rgba(#000,.5) !default;
 
 // Links
-$link-color: $coral;
-$link-hover-color: darken($coral, 40%);
+$link-color: $steel;
+$link-hover-color: lighten($steel, 40%);
 
 // Breakpoints
 $breakpoint-md: '(min-width: 52em)';

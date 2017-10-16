@@ -10,7 +10,7 @@ categories: project
 
 I just finished Jeffrey Rosen’s [book on]( https://yalebooks.yale.edu/book/9780300158670/louis-d-brandeis) Justice Louis D. Brandeis. Rosen makes a convincing argument that Brandeis’ thoughts on privacy, anti-trust, and free speech are uniquely important today. To wit: 
 
-*  Brandeis envisioned and reckoned with the privacy implications of an internet in his 1927 [Olmstead v. United States](https://billofrightsinstitute.org/educate/educator-resources/lessons-plans/landmark-supreme-court-cases-elessons/olmstead-v-united-states-1927/) dissent.
+*  Brandeis envisioned and reckoned with the privacy implications of an internet [in 1927](https://billofrightsinstitute.org/educate/educator-resources/lessons-plans/landmark-supreme-court-cases-elessons/olmstead-v-united-states-1927/).
 *  Seeing the ill effects of sprawling corporations on American democracy, Brandeis disclaimed what he called the “[curse of bigness](https://www.theatlantic.com/politics/archive/2016/06/the-forgotten-wisdom-of-louis-d-brandeis/485477/)” and provided a framework for regulation.
 *  Brandeis' concurrence in [Whitney v. California](http://www.newseuminstitute.org/2016/01/08/free-speech-impact-of-whitney-v-california/) connected free speech with the health of the democratic process. This formed the foundation for our contemporary understanding of free speech.
 
@@ -19,9 +19,12 @@ Rosen also notes the clarity of Brandeis' prose. Compared to his peers then and 
 
 <center><i>“If we would guide by the light of reason, we must let our minds be bold.”</i></center>
 
+
 <center><i>“Fear of serious injury cannot alone justify suppression of free speech and assembly. Men feared witches and burnt women. It is the function of speech to free men from the bondage of irrational fears.”</i></center>
 
+
 <center><i>“If we desire respect for the law, we must first make the law respectable.”</i></center>
+
 
 Given Brandeis’ renewed relevance and unique writing style I wondered if anyone had built a Brandeis Bot. Turns out no one had so that’s what I did with my Sunday afternoon.
 

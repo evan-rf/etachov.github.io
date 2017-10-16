@@ -17,11 +17,11 @@ I just finished Jeffrey Rosen’s [book on]( https://yalebooks.yale.edu/book/978
 
 Rosen also notes the clarity of Brandeis' prose. Compared to his peers then and now Brandeis was a lyricist: 
 
-<center><i>“If we would guide by the light of reason, we must let our minds be bold.”</i></center></br>
+<center><i>“If we would guide by the light of reason, we must let our minds be bold.”</i></center><br/>
 
-<center><i>“Fear of serious injury cannot alone justify suppression of free speech and assembly. Men feared witches and burnt women. It is the function of speech to free men from the bondage of irrational fears.”</i></center></br>
+<center><i>“Fear of serious injury cannot alone justify suppression of free speech and assembly. Men feared witches and burnt women. It is the function of speech to free men from the bondage of irrational fears.”</i></center><br/>
 
-<center><i>“If we desire respect for the law, we must first make the law respectable.”</i></center></br>
+<center><i>“If we desire respect for the law, we must first make the law respectable.”</i></center><br/>
 
 Given Brandeis’ renewed relevance and unique writing style I wondered if anyone had built a Brandeis Bot. Turns out no one had so that’s what I did with my Sunday afternoon.
 

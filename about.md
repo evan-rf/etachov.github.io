@@ -4,10 +4,11 @@ title:
 permalink: /about/
 ---
 
-Hi my name is Evan Tachovsky and I am a data guy working for <a href = "https://www.rockefellerfoundation.org/" target = "_blank">The Rockefeller Foundation</a>. Views expressed here are fully my own.
+Hi my name is Evan Tachovsky and I work on data at <a href = "https://www.rockefellerfoundation.org/" target = "_blank">The Rockefeller Foundation</a>. Views expressed here are fully my own.
 
-Right now I'm working on three projects: 
+Right now I'm working on four personal projects: 
 
+* Collecting and analyzing a <a href = "https://github.com/etachov/state_of_the_city" target = "_blank">corpus of State of the City speeches</a> from U.S. cities.
 * Understanding the longitudinal effects of algorithms in society, <a href = "http://beltmag.com/the-legacy-of-redlining-in-rust-belt-cities/" target = "_blank">for example</a>.
 * Translating between the math present in the digital and physical worlds, <a href = "http://etachov.github.io/photo/2017/08/27/polar-dendrogram/" target = "_blank">for example</a>.
 * Researching how folk metrics--rules of thumb used to understand complex systems--evolve and influence communication online, <a href = "https://etachov.shinyapps.io/Twitter_Tern/" target = "_blank">for example</a>.

@@ -6,7 +6,7 @@ summary:    Analyzing how mayors use sentiment in State of the City speeches
 categories: sotc
 ---
 
-Sentiment analysis is common way to assess emotion in text. Companies use it to understand how customers [feel about their products](https://ymedialabs.com/google-sentiment-analysis-api/) and medical researchers . In the politic science, researchers have used sentiment analysis to assess the [tenor of parliamentary debate](https://link.springer.com/chapter/10.1007/978-3-319-06826-8_4) and measure [response to State of the Union speeches](https://www.aclweb.org/anthology/P/P12/P12-3.pdf#page=127) on Twitter. 
+Sentiment analysis is common way to assess emotion in text. Companies use it to understand how customers [feel about their products](https://ymedialabs.com/google-sentiment-analysis-api/) while medical researchers have used it to [evaluate patient satisfaction](http://www.jmir.org/2013/11/e239/). In the politic science, researchers have used sentiment analysis to assess the [tenor of parliamentary debate](https://link.springer.com/chapter/10.1007/978-3-319-06826-8_4) and measure [response to State of the Union speeches](https://www.aclweb.org/anthology/P/P12/P12-3.pdf#page=127) on Twitter. 
 
 I wanted to use this approach and my State of the City corpus to answer two questions:
 
@@ -91,13 +91,15 @@ Now here are the answers to those two questions:
 **Q1: Which mayors gave the most positive and negative speeches in 2017?**
 --------------------
 
+
 ![](/images/2018-01-02-sentiment-comparison.svg)
 
 
-Based on my reading of the text, the ranking checks out. Mayor Andrew Ginther's speech in Columbus focused the city's "success story". While Mayor Bill de Blasio devoted large portions of his speech to New York's afforability crisis, shifting the distribution lower.
+Based on my reading of the text, the ranking checks out. Mayor Andrew Ginther's [speech in Columbus](https://www.columbus.gov/Templates/Detail.aspx?id=2147494899) focused the city's "success story". While Mayor Bill de Blasio [devoted](https://medium.com/@nycgov/this-is-your-city-6230765d11c) large portions of his speech to New York's afforability crisis, shifting the distribution lower.
 
 **Q2: How does sentiment change within speeches?**
 ---------------------
+
 
 ![](/images/2018-01-02-sentiment-change-during-speech.svg)
 
@@ -106,14 +108,13 @@ The sentence-to-sentence scores are noisy so I use local regression to find posi
 1. Speeches tend to start and end relatively positive.
 2. Many of the speeches have contained negative sections, most clearly Philadelphia and Houston. 
 
-Let's take a closer look at the high and low points of Mayor Jim Kenney's speech in Philadelphia to ground-test the results:
+Let's take a closer look at the high and low points of Mayor Jim Kenney's [speech](https://beta.phila.gov/press-releases/mayor/mayor-kenney-delivers-second-chamber-of-commerce-address/) in Philadelphia to ground-test the results:
 
 ![](/images/2018-01-02-sentiment-change-during-speech-philadelphia.svg)
 
 Here's sentences 110 - 114:
 
 *"To give start-ups another boost, we also worked with the state to expand the boundaries of the Keystone Innovation Zone to include the growing tech community in Old City. In 2016, 36 companies in this zone benefited from a cumulative $2.4 million in tax credits. Thanks to these and other efforts, the U.S. Chamber of Commerce ranked Philadelphia among the top ten cities for its ability to take advantage of the digital economy, outranking both New York and DC. Overall, I’m pleased to say that our efforts to make Philadelphia more business friendly have paid off."*
-
 
 And here's sentences 138 - 141:
 

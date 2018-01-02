@@ -2,7 +2,7 @@
 layout:     post
 title:      Sentiment of the City
 date:       2018-01-02
-summary:    
+summary:    Analyzing how mayors use sentiment in State of the City speeches
 categories: sotc
 ---
 

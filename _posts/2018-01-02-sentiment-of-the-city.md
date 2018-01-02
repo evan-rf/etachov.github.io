@@ -6,12 +6,12 @@ summary:    Analyzing how mayors use sentiment in State of the City speeches
 categories: sotc
 ---
 
-Sentiment analysis is common way to assess emotion in text. Companies use it to understand how customers [feel about their products](https://ymedialabs.com/google-sentiment-analysis-api/) while medical researchers have used it to [evaluate patient satisfaction](http://www.jmir.org/2013/11/e239/). In the politic science, researchers have used sentiment analysis to assess the [tenor of parliamentary debate](https://link.springer.com/chapter/10.1007/978-3-319-06826-8_4) and measure [response to State of the Union speeches](https://www.aclweb.org/anthology/P/P12/P12-3.pdf#page=127) on Twitter. 
+Sentiment analysis is common way to assess emotion in text. Companies use it to understand how customers [feel about their products](https://ymedialabs.com/google-sentiment-analysis-api/) while medical researchers have used it to [evaluate patient satisfaction](http://www.jmir.org/2013/11/e239/). In the political science, researchers have used sentiment analysis to assess the [tenor of parliamentary debate](https://link.springer.com/chapter/10.1007/978-3-319-06826-8_4) and measure [response](https://www.aclweb.org/anthology/P/P12/P12-3.pdf#page=127) to State of the Union speeches on Twitter. 
 
-I wanted to use this approach and my State of the City corpus to answer two questions:
+I wanted to use this technique and my [State of the City corpus](https://github.com/etachov/state_of_the_city) to answer two questions:
 
 1. In 2017, which mayors gave the most positive and negative speeches?
-2. How does sentiment change over the course of a speech? Are there clear positive of negative sections?
+2. How does sentiment change over the course of a speech? Can we identify clear positive or negative sections?
 
 If you're just interested in the answers, scroll down to the charts below. If you're interested in the methodology, here's the R code:
 

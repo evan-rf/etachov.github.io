@@ -10,7 +10,7 @@ Sentiment analysis is common way to evaluate emotion in text. Companies use it t
 
 Today, I'll apply this technique to my [State of the City corpus](https://github.com/etachov/state_of_the_city) to answer two questions:
 
-1. In 2017, which mayors gave the most positive and negative State of the City speech?
+1. In 2017, which mayors gave the most positive and negative State of the City speeches?
 2. How does sentiment change over the course of a speech? Can we identify clear positive or negative sections?
 
 If you're just interested in the answers, scroll down to the charts below. If you're interested in the methodology, here's the R code:
@@ -117,8 +117,8 @@ Here's sentences 110 - 114:
 
 And here's sentences 138 - 141:
 
-*"...the opioid crisis and other factors are forcing more people onto the street every day, so we will need to invest more in stemming the tide of the recently-homeless.As part of that strategy, I will ask Council to allocate more of our upcoming budget towards treating drug addiction. Philadelphia is facing an opioid crisis so gripping that we lost 900 people to overdoses last year.  Not to mention the unknown number lost to families and friends, living along the railroad tracks in Kensington or on the floor of a rundown building."*
+*"...the opioid crisis and other factors are forcing more people onto the street every day, so we will need to invest more in stemming the tide of the recently-homeless. As part of that strategy, I will ask Council to allocate more of our upcoming budget towards treating drug addiction. Philadelphia is facing an opioid crisis so gripping that we lost 900 people to overdoses last year.  Not to mention the unknown number lost to families and friends, living along the railroad tracks in Kensington or on the floor of a rundown building."*
 
 
-The full code for the analysis and charts is available on [github](https://github.com/etachov/sentiment_of_the_city). And if you'd like to use, edit, or contribute to the State of the City corpus, it's also on [github](https://github.com/etachov/state_of_the_city).
+The code for the analysis and charts is available on [github](https://github.com/etachov/sentiment_of_the_city). And if you'd like to use, edit, or contribute to the State of the City corpus, it's also on [github](https://github.com/etachov/state_of_the_city).
 

@@ -2,15 +2,15 @@
 layout:     post
 title:      Sentiment of the City
 date:       2018-01-02
-summary:    Analyzing how mayors use sentiment in State of the City speeches
+summary:    Analyzing the sentiment of 2017 State of the City speeches
 categories: sotc
 ---
 
-Sentiment analysis is common way to assess emotion in text. Companies use it to understand how customers [feel about their products](https://ymedialabs.com/google-sentiment-analysis-api/) while medical researchers have used it to [evaluate patient satisfaction](http://www.jmir.org/2013/11/e239/). In the political science, researchers have used sentiment analysis to assess the [tenor of parliamentary debate](https://link.springer.com/chapter/10.1007/978-3-319-06826-8_4) and measure [response](https://www.aclweb.org/anthology/P/P12/P12-3.pdf#page=127) to State of the Union speeches on Twitter. 
+Sentiment analysis is common way to evaluate emotion in text. Companies use it to understand how customers [feel about their products](https://ymedialabs.com/google-sentiment-analysis-api/), medical researchers use it to [evaluate patient satisfaction](http://www.jmir.org/2013/11/e239/) and political sciencist have used it to assess the [tenor of parliamentary debate](https://link.springer.com/chapter/10.1007/978-3-319-06826-8_4) and measure [response](https://www.aclweb.org/anthology/P/P12/P12-3.pdf#page=127) to State of the Union speeches on Twitter. 
 
-I wanted to use this technique and my [State of the City corpus](https://github.com/etachov/state_of_the_city) to answer two questions:
+Today, I'll apply this technique to my [State of the City corpus](https://github.com/etachov/state_of_the_city) to answer two questions:
 
-1. In 2017, which mayors gave the most positive and negative speeches?
+1. In 2017, which mayors gave the most positive and negative State of the City speech?
 2. How does sentiment change over the course of a speech? Can we identify clear positive or negative sections?
 
 If you're just interested in the answers, scroll down to the charts below. If you're interested in the methodology, here's the R code:
@@ -55,7 +55,7 @@ speech_sentences <- unnest_tokens(text_raw, output = "sentences", input = "text"
 
 ```
 
-To score sentiment at the sentence level, I used Tyler Rinker's [`sentimentr`](https://github.com/trinker/sentimentr) package. I chose `sentimentr` because it take into account valence shifters (e.g. negations like "not good") when calculating the scores. 
+To score sentiment at the sentence level, I used [Tyler Rinker's `sentimentr`](https://github.com/trinker/sentimentr) package. I chose `sentimentr` because it takes into account valence shifters (e.g. negations like "not good") when calculating the scores. 
 
 ```R
 
@@ -66,7 +66,7 @@ full_sentiment <- sentiment(speech_sentences$sentences,
                             n.before = Inf, n.after = Inf) %>% 
   # element_id is the sentence id from unnest_token
   group_by(element_id) %>%
-  # in a few instances, sentimentr::sentiment's tokenization approach disagrees with tidyverse::unnest_tokens' with 
+  # in a few instances, sentimentr::sentiment's tokenization approach disagrees with tidytext::unnest_tokens' with 
   # for those few instances, we'll use summary statistics for each sentence
   summarise(word_count = sum(word_count),
             sentiment = mean(sentiment))
@@ -88,17 +88,16 @@ speech_sent <- bind_cols(speech_sentences, full_sentiment) %>%
 
 Now here are the answers to those two questions:
 
-**Q1: Which mayors gave the most positive and negative speeches in 2017?**
---------------------
+### Q1: Which mayors gave the most positive and negative speeches in 2017? ###
+
 
 
 ![](/images/2018-01-02-sentiment-comparison.svg)
 
 
-Based on my reading of the text, the ranking checks out. Mayor Andrew Ginther's [speech in Columbus](https://www.columbus.gov/Templates/Detail.aspx?id=2147494899) focused the city's "success story". While Mayor Bill de Blasio [devoted](https://medium.com/@nycgov/this-is-your-city-6230765d11c) large portions of his speech to New York's afforability crisis, shifting the distribution lower.
+Based on my reading of the text, the ranking checks out. Mayor Andrew Ginther's [speech in Columbus](https://www.columbus.gov/Templates/Detail.aspx?id=2147494899) focused the city's "success story". While Mayor Bill de Blasio [devoted](https://medium.com/@nycgov/this-is-your-city-6230765d11c) a large part of his speech to New York's afforability crisis.
 
-**Q2: How does sentiment change within speeches?**
----------------------
+### Q2: How does sentiment change over the course of a speech? ###
 
 
 ![](/images/2018-01-02-sentiment-change-during-speech.svg)
@@ -106,7 +105,7 @@ Based on my reading of the text, the ranking checks out. Mayor Andrew Ginther's 
 The sentence-to-sentence scores are noisy so I use local regression to find positive and negative sections. The chart highlights a couple of interesting patterns:
 
 1. Speeches tend to start and end relatively positive.
-2. Many of the speeches have contained negative sections, most clearly Philadelphia and Houston. 
+2. Many speeches have distinct negative sections, most clearly Philadelphia and Houston. 
 
 Let's take a closer look at the high and low points of Mayor Jim Kenney's [speech](https://beta.phila.gov/press-releases/mayor/mayor-kenney-delivers-second-chamber-of-commerce-address/) in Philadelphia to ground-test the results:
 

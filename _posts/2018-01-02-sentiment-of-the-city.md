@@ -6,7 +6,7 @@ summary:    Analyzing the sentiment of 2017 State of the City speeches
 categories: sotc
 ---
 
-Sentiment analysis is common way to evaluate emotion in text. Companies use it to understand how customers [feel about their products](https://ymedialabs.com/google-sentiment-analysis-api/), medical researchers use it to [evaluate patient satisfaction](http://www.jmir.org/2013/11/e239/), and political sciencist have used it to assess the [tenor](https://link.springer.com/chapter/10.1007/978-3-319-06826-8_4) of parliamentary debate and measure [response](https://www.aclweb.org/anthology/P/P12/P12-3.pdf#page=127) to State of the Union speeches on Twitter. 
+Sentiment analysis is common way to evaluate emotion in text. Companies use it to understand how customers [feel about their products](https://ymedialabs.com/google-sentiment-analysis-api/), medical researchers use it to [evaluate patient satisfaction](http://www.jmir.org/2013/11/e239/), and political scientist have used it to assess the [tenor](https://link.springer.com/chapter/10.1007/978-3-319-06826-8_4) of parliamentary debate and measure [response](https://www.aclweb.org/anthology/P/P12/P12-3.pdf#page=127) to State of the Union speeches on Twitter. 
 
 Today, I'll use this technique and my [State of the City corpus](https://github.com/etachov/state_of_the_city) to answer two questions:
 
@@ -95,7 +95,7 @@ Now here are the answers to those two questions:
 ![](/images/2018-01-02-sentiment-comparison.svg)
 
 
-Based on my reading of the text, the ranking checks out. Mayor Andrew Ginther's [speech in Columbus](https://www.columbus.gov/Templates/Detail.aspx?id=2147494899) focused the city's "success story". While Mayor Bill de Blasio [devoted](https://medium.com/@nycgov/this-is-your-city-6230765d11c) a large part of his speech to New York's afforability crisis.
+Based on my reading of the text, the ranking checks out. Mayor Andrew Ginther's [speech in Columbus](https://www.columbus.gov/Templates/Detail.aspx?id=2147494899) focused the city's "success story". While Mayor Bill de Blasio [devoted](https://medium.com/@nycgov/this-is-your-city-6230765d11c) a large part of his speech to New York's affordability crisis.
 
 ### Q2: How does sentiment change over the course of a speech? ###
 

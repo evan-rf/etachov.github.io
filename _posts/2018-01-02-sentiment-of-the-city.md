@@ -6,14 +6,14 @@ summary:    Analyzing the sentiment of 2017 State of the City speeches
 categories: sotc
 ---
 
-Sentiment analysis is common way to evaluate emotion in text. Companies use it to understand how customers [feel about their products](https://ymedialabs.com/google-sentiment-analysis-api/), medical researchers use it to [evaluate patient satisfaction](http://www.jmir.org/2013/11/e239/) and political sciencist have used it to assess the [tenor of parliamentary debate](https://link.springer.com/chapter/10.1007/978-3-319-06826-8_4) and measure [response](https://www.aclweb.org/anthology/P/P12/P12-3.pdf#page=127) to State of the Union speeches on Twitter. 
+Sentiment analysis is common way to evaluate emotion in text. Companies use it to understand how customers [feel about their products](https://ymedialabs.com/google-sentiment-analysis-api/), medical researchers use it to [evaluate patient satisfaction](http://www.jmir.org/2013/11/e239/), and political sciencist have used it to assess the [tenor](https://link.springer.com/chapter/10.1007/978-3-319-06826-8_4) of parliamentary debate and measure [response](https://www.aclweb.org/anthology/P/P12/P12-3.pdf#page=127) to State of the Union speeches on Twitter. 
 
-Today, I'll apply this technique to my [State of the City corpus](https://github.com/etachov/state_of_the_city) to answer two questions:
+Today, I'll use this technique and my [State of the City corpus](https://github.com/etachov/state_of_the_city) to answer two questions:
 
 1. In 2017, which mayors gave the most positive and negative State of the City speeches?
 2. How does sentiment change over the course of a speech? Can we identify clear positive or negative sections?
 
-If you're just interested in the answers, scroll down to the charts below. If you're interested in the methodology, here's the R code:
+If you're just interested in the answers, scroll down to the charts below. If you're interested in the how, here's the R code:
 
 
 ```R
@@ -102,7 +102,7 @@ Based on my reading of the text, the ranking checks out. Mayor Andrew Ginther's 
 
 ![](/images/2018-01-02-sentiment-change-during-speech.svg)
 
-The sentence-to-sentence scores are noisy so I use local regression to find positive and negative sections. The chart highlights a couple of interesting patterns:
+The sentence-to-sentence scores are noisy so I use local regression to find positive and negative sections. The chart above highlights a couple of interesting patterns:
 
 1. Speeches tend to start and end relatively positive.
 2. Many speeches have distinct negative sections, most clearly Philadelphia and Houston. 
@@ -111,11 +111,11 @@ Let's take a closer look at the high and low points of Mayor Jim Kenney's [speec
 
 ![](/images/2018-01-02-sentiment-change-during-speech-philadelphia.svg)
 
-Here's sentences 110 - 114:
+Here's sentences 110 - 114 (the high point):
 
 *"To give start-ups another boost, we also worked with the state to expand the boundaries of the Keystone Innovation Zone to include the growing tech community in Old City. In 2016, 36 companies in this zone benefited from a cumulative $2.4 million in tax credits. Thanks to these and other efforts, the U.S. Chamber of Commerce ranked Philadelphia among the top ten cities for its ability to take advantage of the digital economy, outranking both New York and DC. Overall, I’m pleased to say that our efforts to make Philadelphia more business friendly have paid off."*
 
-And here's sentences 138 - 141:
+And here's sentences 138 - 141 (the low point):
 
 *"...the opioid crisis and other factors are forcing more people onto the street every day, so we will need to invest more in stemming the tide of the recently-homeless. As part of that strategy, I will ask Council to allocate more of our upcoming budget towards treating drug addiction. Philadelphia is facing an opioid crisis so gripping that we lost 900 people to overdoses last year.  Not to mention the unknown number lost to families and friends, living along the railroad tracks in Kensington or on the floor of a rundown building."*
 

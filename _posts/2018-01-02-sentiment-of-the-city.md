@@ -111,11 +111,11 @@ Let's take a closer look at the high and low points of Mayor Jim Kenney's [speec
 
 ![](/images/2018-01-02-sentiment-change-during-speech-philadelphia.svg)
 
-Here's sentences 110 - 114 (the high point):
+Here are sentences 110 - 114 (the high point):
 
 *"To give start-ups another boost, we also worked with the state to expand the boundaries of the Keystone Innovation Zone to include the growing tech community in Old City. In 2016, 36 companies in this zone benefited from a cumulative $2.4 million in tax credits. Thanks to these and other efforts, the U.S. Chamber of Commerce ranked Philadelphia among the top ten cities for its ability to take advantage of the digital economy, outranking both New York and DC. Overall, I’m pleased to say that our efforts to make Philadelphia more business friendly have paid off."*
 
-And here's sentences 138 - 141 (the low point):
+And here are sentences 138 - 141 (the low point):
 
 *"...the opioid crisis and other factors are forcing more people onto the street every day, so we will need to invest more in stemming the tide of the recently-homeless. As part of that strategy, I will ask Council to allocate more of our upcoming budget towards treating drug addiction. Philadelphia is facing an opioid crisis so gripping that we lost 900 people to overdoses last year.  Not to mention the unknown number lost to families and friends, living along the railroad tracks in Kensington or on the floor of a rundown building."*
 

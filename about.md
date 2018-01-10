@@ -4,7 +4,7 @@ title:
 permalink: /about/
 ---
 
-Hi my name is Evan Tachovsky and I work on data at <a href = "https://www.rockefellerfoundation.org/" target = "_blank">The Rockefeller Foundation</a>. Views expressed here are fully my own.
+Hi my name is Evan and I work on data at <a href = "https://www.rockefellerfoundation.org/" target = "_blank">The Rockefeller Foundation</a>. Views expressed here are fully my own.
 
 Right now I'm working on four personal projects: 
 

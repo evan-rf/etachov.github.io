@@ -10,12 +10,12 @@ categories: projects
 
 When looking at communities of writers and thinkers, a fundamental question is who is talking about whom. For academics, we look at [citiations networks](https://kieranhealy.org/blog/archives/2013/06/18/a-co-citation-network-for-philosophy/). For bloggers and social media personalities, we look at [hyperlink](http://www.tandfonline.com/doi/abs/10.1080/13183222.2008.11008970) or [follower](https://www.aaai.org/ocs/index.php/ICWSM/ICWSM10/paper/viewFile/1468/1896) networks.
 
-I applied this framework to another community of writers and thinkers: _The New York Times_ Op-Ed columnists. To do this, I collected the ten most recent articles by each of the eleven writers. I then extracted all of the hyperlinks from the body of the articles to create the interactive graph below (full screen version [here](http://etachov.io/projects/nyt_citation_graph.html)). The data as well as the code I used to collect and analyze the links are available [on github](https://github.com/etachov/nyt_opinion_citations).  
+I applied this framework to another community of writers and thinkers: _The New York Times_ Op-Ed columnists. To do this, I collected the ten most recent articles by each of the eleven writers. I then extracted all of the hyperlinks from the articles to create the interactive graph below (full screen version [here](http://etachov.io/projects/nyt_citation_graph.html)). The data as well as the code I used to collect and analyze the links are available [on github](https://github.com/etachov/nyt_opinion_citations).  
 
 <iframe width='100%' height='700px' frameBorder='0' src='http://etachov.io/projects/nyt_citation_graph_simple.html'></iframe>
 <center><i>Explore the full screen graph  <a href = "http://etachov.io/projects/nyt_citation_graph.html" target = "_blank">here</a></i></center><br>
 
-Looking at this graph a few things popped out for me. **First**, it's clear which outlets are at the center of the conversation. _The New York Times_ was cited by the all 11 of the columnists, _Washington Post_ by nine, _The Atlantic_ by seven, and CNN by seven. Taken together, these outlets are the "mainstream media", at least from the perspective of the _Times_' Op-Ed columnists.
+Looking at this graph a few things popped out for me. **First**, it's clear which outlets are at the center of the conversation. _The New York Times_ was (not surprisingly) cited by the all eleven columnists, _Washington Post_ by nine, _The Atlantic_ by seven, and CNN by seven. Taken together, these outlets are the "mainstream media", at least from the perspective of the _Times_' Op-Ed columnists.
 
 ![](/images/2018-01-28-nyt-graph-1-top-sources.gif)  
 
@@ -33,4 +33,4 @@ Looking at this graph a few things popped out for me. **First**, it's clear whic
 
 <br><center><b>Explore the full graph <a href = "http://etachov.io/projects/nyt_citation_graph.html" target = "_blank">here</a></b></center><br>
 
-For all of these results keep in mind that we're looking at a limited and time-bound sample of articles. When I get a bit of time to figure out Selelium, I'm hoping to collect a year's worth of data. More to come!
+Keep in mind that we're looking at a limited and time-bound sample of articles. When I get a bit of time to figure out Selelium, I'm hoping to collect a year's worth of data. More to come!

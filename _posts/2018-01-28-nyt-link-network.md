@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      New York Times Op-Ed Columnists Link Networks
+title:      New York Times Op-Ed Link Networks
 date:       2018-01-28
 summary:    
 categories: projects

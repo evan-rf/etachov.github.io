@@ -8,27 +8,34 @@ categories: projects
 
 ![](/images/2018-01-28-nyt-graph-header.png)
 
-When looking at communities of writers and thinkers, the most basic question is who is talking about whom? For scientists, the question is framed in terms of [citiations networks](https://kieranhealy.org/blog/archives/2013/06/18/a-co-citation-network-for-philosophy/). For bloggers, we look at which blogs link to other blogs. 
+When looking at communities of writers and thinkers, the most basic question is who is talking about whom? For scientists, we look at [citiations networks](https://kieranhealy.org/blog/archives/2013/06/18/a-co-citation-network-for-philosophy/). For bloggers, we look at inter-blog hyperlink networks. 
 
-I decided to apply this framework to another community of writers and thinkers: the _The New York Times_ Op-Ed columnists. To do this, I collected the ten most recent articles from all 11 permanent writers. I then extracted all of the hyperlinks from the body of the articles to create the interactive graph below (full screen version [here](http://etachov.io/projects/nyt_citation_graph.html)). The code I used to collect, analyze, and visualize the links is available [on github](https://github.com/etachov/nyt_opinion_citations).
+I decided to apply this framework to another community of writers and thinkers:_The New York Times_ Op-Ed columnists. To do this, I collected the ten most recent articles from all 11 permanent writers. I then extracted all of the hyperlinks from the body of the articles to create the interactive graph below (full screen version [here](http://etachov.io/projects/nyt_citation_graph.html)). The data as well as the code I used to collect, analyze, and visualize the links are available [on github](https://github.com/etachov/nyt_opinion_citations).
 
 <iframe width='100%' height='700px' frameBorder='0' src='http://etachov.io/projects/nyt_citation_graph_simple.html'></iframe>
-<center>_Explore the full screen graph  [here](http://etachov.io/projects/nyt_citation_graph.html)_</center>
+<center><i>Explore the full screen graph  <a href = "http://etachov.io/projects/nyt_citation_graph.html" target = "_blank">here</a></i></center>
+
 
 Looking at this graph a few things popped out for me. First, it's clear which outlets are at the center of the conversation. _The New York Times_ was cited by the all 11 of the columnists, _Washington Post_ by nine, _The Atlantic_ by seven, and CNN by seven. Taken together, these outlets are the "mainstream media", at least from the perspective of the Times' Op-Ed columnists.
 
 ![](/images/2018-01-28-nyt-graph-1-top-sources.gif)
+*1. Central Outlets*
 
 Second, startup media outlets are in the periphery of the network. Vox was cited by four of the columnists, while Business Insider, Buzzfeed, and Axios were cited by one columnist each. It will be interesting to see which of these outlets shift into the center of the network over time.
 
 ![](/images/2018-01-28-nyt-graph-2-startup-media.gif)
+*2. New Media*
 
-Third, there are clear differences in how the columnists approach linking. Nicholas Kristof links out the most (92 links) and to the widest range of sources (51 different sites). Maureen Dowd takes a different approach, linking out only 17 times to 8 different sources.
+Third, there are clear differences in how the columnists approach linking. Nicholas Kristof linked out the most (92 links) and to the widest range of sources (51 different sites). Maureen Dowd took a different approach, linking out only 17 times to 8 different sources.
 
 ![](/images/2018-01-28-citation_frequency.png)
+*3. Citation Frequency*
 
 Finally, Nicholas Kristof's subnetwork is the most distinct. Of the sites he linked to only 16% were also linked to by another columnist. Conversely, Roger Cohen's subnetwork is the most embedded in the graph; 71% of his linked sites were also linked to by other columnists.
 
 ![](/images/2018-01-28-nyt-graph-4-distinct.gif)
+*4. Subnetworks*
 
-For all of these results keep in mind that we're dealing with a limited and time-bound sample of articles. When I get a bit more time, I'm planning to collect a year's worth of links. More to come!
+<center>Explore the full screen graph yourself  <a href = "http://etachov.io/projects/nyt_citation_graph.html" target = "_blank">here</a></center>
+
+For all of these results keep in mind that we're dealing with a limited and time-bound sample of articles. When I get a bit of time to figure out Selelium, I'm hoping to build up a year's worth of data. More to come!

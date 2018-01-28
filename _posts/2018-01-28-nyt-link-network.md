@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      New York Times Opinion Columnists Link Networks
+title:      New York Times Op-Ed Columnists Link Networks
 date:       2018-01-28
 summary:    
 categories: projects
@@ -8,18 +8,18 @@ categories: projects
 
 ![](/images/2018-01-28-nyt-graph-header.png)
 
-When looking at communities of writers and thinkers, the most basic question is who is talking about whom? For scientists, the question is framed in terms of citiations networks. For bloggers, we look at which blogs link to other blogs. 
+When looking at communities of writers and thinkers, the most basic question is who is talking about whom? For scientists, the question is framed in terms of [citiations networks](https://kieranhealy.org/blog/archives/2013/06/18/a-co-citation-network-for-philosophy/). For bloggers, we look at which blogs link to other blogs. 
 
-I decided to apply this framework to another community of writers and thinkers: the  columnists of _The New York Times_ Opinion page. To do this, I collected the ten most recent articles from all 11 columnists in residence. I then extracted all of the hyperlinks from the body of the articles to create the interactive graph below (full screen version here). The code I used to collect, analyze, and visualize the links is available [on github](https://github.com/etachov/nyt_opinion_citations).
+I decided to apply this framework to another community of writers and thinkers: the _The New York Times_ Op-Ed columnists. To do this, I collected the ten most recent articles from all 11 permanent writers. I then extracted all of the hyperlinks from the body of the articles to create the interactive graph below (full screen version [here](http://etachov.io/projects/nyt_citation_graph.html)). The code I used to collect, analyze, and visualize the links is available [on github](https://github.com/etachov/nyt_opinion_citations).
 
 <iframe width='100%' height='700px' frameBorder='0' src='http://etachov.io/projects/nyt_citation_graph_simple.html'></iframe>
-_Explore the full screen graph  [here](http://etachov.io/projects/nyt_citation_graph.html)_
+<center>_Explore the full screen graph  [here](http://etachov.io/projects/nyt_citation_graph.html)_</center>
 
-Looking at this graph a few things popped out for me. First, it's clear which outlets are at the center of the conversation. _The New York Times_ was cited by the all 11 of the columnists, _Washington Post_ by nine, _The Atlantic_ by seven, and CNN by seven. Taken together, these sources represent mainstream sources, at least from the perspetive of the Times' Opinion columnists.
+Looking at this graph a few things popped out for me. First, it's clear which outlets are at the center of the conversation. _The New York Times_ was cited by the all 11 of the columnists, _Washington Post_ by nine, _The Atlantic_ by seven, and CNN by seven. Taken together, these outlets are the "mainstream media", at least from the perspective of the Times' Op-Ed columnists.
 
 ![](/images/2018-01-28-nyt-graph-1-top-sources.gif)
 
-Second, startup media outlets are in the periphery of the network. Vox was cited by four of the columists, while Business Insider, Buzzfeed, and Axios were cited by one columnist each. It will be interesting to see which of these outlets shift into the center of the network over time.
+Second, startup media outlets are in the periphery of the network. Vox was cited by four of the columnists, while Business Insider, Buzzfeed, and Axios were cited by one columnist each. It will be interesting to see which of these outlets shift into the center of the network over time.
 
 ![](/images/2018-01-28-nyt-graph-2-startup-media.gif)
 
@@ -27,8 +27,8 @@ Third, there are clear differences in how the columnists approach linking. Nicho
 
 ![](/images/2018-01-28-citation_frequency.png)
 
-Finally, Nicholas Kristoff's subnetwork is the most distinct. Of the sites he linked to only 16% were also linked to by another columnist. Conversely, Roger Cohen's subnetwork is the most embedded in the graph; 71% of his linked sites were also linked to by other columnists.
+Finally, Nicholas Kristof's subnetwork is the most distinct. Of the sites he linked to only 16% were also linked to by another columnist. Conversely, Roger Cohen's subnetwork is the most embedded in the graph; 71% of his linked sites were also linked to by other columnists.
 
 ![](/images/2018-01-28-nyt-graph-4-distinct.gif)
 
-More to come!
+For all of these results keep in mind that we're dealing with a limited and time-bound sample of articles. When I get a bit more time, I'm planning to collect a year's worth of links. More to come!

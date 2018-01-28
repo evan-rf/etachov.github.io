@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      What Sites do New York Times Opinion Columnists Cite?
+title:      New York Times Opinion Columnists Link Networks
 date:       2018-01-28
 summary:    
 categories: projects
@@ -12,7 +12,7 @@ When looking at communities of writers and thinkers, the most basic question is 
 
 I decided to apply this framework to another community of writers and thinkers: the  columnists of _The New York Times_ Opinion page. To do this, I collected the ten most recent articles from all 11 columnists in residence. I then extracted all of the hyperlinks from the body of the articles to create the interactive graph below (full screen version here). The code I used to collect, analyze, and visualize the links is available [on github](https://github.com/etachov/nyt_opinion_citations).
 
-<iframe width='100%' height='800px' frameBorder='1' src='http://etachov.io/projects/nyt_citation_graph_simple.html'></iframe>
+<iframe width='100%' height='700px' frameBorder='0' src='http://etachov.io/projects/nyt_citation_graph_simple.html'></iframe>
 _Explore the full screen graph  [here](http://etachov.io/projects/nyt_citation_graph.html)_
 
 Looking at this graph a few things popped out for me. First, it's clear which outlets are at the center of the conversation. _The New York Times_ was cited by the all 11 of the columnists, _Washington Post_ by nine, _The Atlantic_ by seven, and CNN by seven. Taken together, these sources represent mainstream sources, at least from the perspetive of the Times' Opinion columnists.

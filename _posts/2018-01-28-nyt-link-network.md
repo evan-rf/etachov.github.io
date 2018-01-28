@@ -8,7 +8,7 @@ categories: projects
 
 ![](/images/2018-01-28-nyt-graph-header.png)
 
-When looking at communities of writers and thinkers, the most basic question is who is talking about whom? For scientists, we look at [citiations networks](https://kieranhealy.org/blog/archives/2013/06/18/a-co-citation-network-for-philosophy/). For bloggers and social media personalities, we look at [hyperlink](http://www.tandfonline.com/doi/abs/10.1080/13183222.2008.11008970) or [follower](https://www.aaai.org/ocs/index.php/ICWSM/ICWSM10/paper/viewFile/1468/1896) networks. 
+When looking at communities of writers and thinkers, a core question is who is talking about whom. For scientists, we look at [citiations networks](https://kieranhealy.org/blog/archives/2013/06/18/a-co-citation-network-for-philosophy/). For bloggers and social media personalities, we look at [hyperlink](http://www.tandfonline.com/doi/abs/10.1080/13183222.2008.11008970) or [follower](https://www.aaai.org/ocs/index.php/ICWSM/ICWSM10/paper/viewFile/1468/1896) networks. 
 
 I decided to apply this framework to another community of writers and thinkers:_The New York Times_ Op-Ed columnists. To do this, I collected the ten most recent articles from all 11 permanent writers. I then extracted all of the hyperlinks from the body of the articles to create the interactive graph below (full screen version [here](http://etachov.io/projects/nyt_citation_graph.html)). The data as well as the code I used to collect, analyze, and visualize the links are available [on github](https://github.com/etachov/nyt_opinion_citations).  
 

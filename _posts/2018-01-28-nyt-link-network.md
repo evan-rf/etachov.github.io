@@ -10,12 +10,12 @@ categories: projects
 
 When looking at communities of writers and thinkers, the most basic question is who is talking about whom? For scientists, the question is framed in terms of citiations networks. For bloggers, we look at which blogs link to other blogs. 
 
-I decided to apply this framework to another community of writers and thinkers: the  columnists of _The New York Times_ Opinion page. To do this, I collected the ten most recent articles from all 11 columnists in residence. I then extracted all of the hyperlinks from the body of the articles to create the network graph below. The code I used to collect, analyze, and visualize the links is available [on github](https://github.com/etachov/nyt_opinion_citations).
+I decided to apply this framework to another community of writers and thinkers: the  columnists of _The New York Times_ Opinion page. To do this, I collected the ten most recent articles from all 11 columnists in residence. I then extracted all of the hyperlinks from the body of the articles to create the interactive graph below. The code I used to collect, analyze, and visualize the links is available [on github](https://github.com/etachov/nyt_opinion_citations).
 
-<iframe width='100%' height='600px' frameBorder='0' src='http://etachov.io/projects/nyt_citation_graph_simple.html'></iframe>
-_Full screen [here](http://etachov.io/projects/nyt_citation_graph.html)_
+<iframe width='100%' height='800px' frameBorder='0' src='http://etachov.io/projects/nyt_citation_graph_simple.html'></iframe>
+*_Explore the full screen graph  [here](http://etachov.io/projects/nyt_citation_graph.html)_*
 
-Looking at this graph a few things popped out for me. First, it's clear which outlets are at the center of the conversation. _The New York Times_ was cited by the all 11 of the columnists, _Washington Post_ by nine, _The Atlantic_ by seven, and _CNN_ by seven. Taken together, these sources represent mainstream sources, at least from the perspetive of the Times' Opinion columnists.
+Looking at this graph a few things popped out for me. First, it's clear which outlets are at the center of the conversation. _The New York Times_ was cited by the all 11 of the columnists, _Washington Post_ by nine, _The Atlantic_ by seven, and CNN by seven. Taken together, these sources represent mainstream sources, at least from the perspetive of the Times' Opinion columnists.
 
 ![](/images/2018-01-28-nyt-graph-1-top-sources.gif)
 
@@ -32,3 +32,4 @@ Finally, Nicholas Kristoff's subnetwork is the most distinct. Of the sites he li
 
 ![](/images/2018-01-28-nyt-graph-4-distinct.gif)
 
+More to come!

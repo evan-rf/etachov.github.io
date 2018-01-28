@@ -31,6 +31,6 @@ Looking at this graph a few things popped out for me. **First**, it's clear whic
 
 ![](/images/2018-01-28-nyt-graph-4-distinct.gif)  
 
-<br><center><b>Explore graph for <a href = "http://etachov.io/projects/nyt_citation_graph.html" target = "_blank">here</a></b></center><br>
+<br><center><b>Explore the full graph <a href = "http://etachov.io/projects/nyt_citation_graph.html" target = "_blank">here</a></b></center><br>
 
 For all of these results keep in mind that we're looking at a limited and time-bound sample of articles. When I get a bit of time to figure out Selelium, I'm hoping to collect a year's worth of data. More to come!

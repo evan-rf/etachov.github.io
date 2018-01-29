@@ -27,10 +27,10 @@ Looking at this graph a few things popped out for me. **First**, it's clear whic
 
 ![](/images/2018-01-28-citation_frequency.png)  
 
-**Finally**, Nicholas Kristof's subnetwork is the most distinct. Of the sites he linked to only 16% were also linked to other columnists. Conversely, Roger Cohen's subnetwork is the most embedded in the graph; 71% of his linked sites were also linked to by other columnists.
+**Finally**, Nicholas Kristof's subnetwork is the most distinct. Of the sites he linked to only 16% were also linked to by other columnists. Conversely, Roger Cohen's subnetwork is the most embedded in the graph; 71% of his linked sites were also linked to by other columnists.
 
 ![](/images/2018-01-28-nyt-graph-4-distinct.gif)  
 
 <br><center><b>Explore the full graph <a href = "http://etachov.io/projects/nyt_citation_graph.html" target = "_blank">here</a></b></center><br>
 
-Keep in mind that we're looking at a limited and time-bound sample of articles. When I get a bit of time to figure out Selelium, I'm hoping to collect a year's worth of data. More to come!
+For all of these results, keep in mind that we're looking at a limited and time-bound sample of articles. When I get a bit of time to figure out Selelium, I'm hoping to collect a year's worth of data. More to come!

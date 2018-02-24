@@ -109,7 +109,7 @@ svg {
 
 /* Basscss Base Typography */
 body {
-  font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", "Merriweather", "PT Serif", serif;
   line-height: 1.5;
   font-size: 100%; }
 

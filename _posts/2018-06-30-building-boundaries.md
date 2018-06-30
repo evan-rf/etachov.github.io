@@ -10,11 +10,11 @@ categories: spatial
 
 The Bing Maps team at Microsoft recently [released](https://blogs.bing.com/maps/2018-06/microsoft-releases-125-million-building-footprints-in-the-us-as-open-data/) a dataset of nearly 125 million building footprints across United States.
 
-These footprints were derived using a [two-step process](https://github.com/Microsoft/USBuildingFootprints). First, the team used [deep residual neural network](https://github.com/KaimingHe/deep-residual-networks) to identify likely building pixels. Second, they developed a novel method for grouping the building pixels into sensible polygons.
+These footprints were derived using a [two-step process](https://github.com/Microsoft/USBuildingFootprints). First, the team used a [deep residual neural network](https://github.com/KaimingHe/deep-residual-networks) to identify likely building pixels. Second, they developed a novel method for grouping the building pixels into sensible polygons.
 
-I plotted building footprints around Mall in Washington DC over satellite imagery for a quick visual inspection: 
+I plotted the building footprints around Mall in Washington, D.C. over satellite imagery for a quick visual inspection: 
 
-<iframe width='100%' height='600px' frameBorder='0' src='http://etachov.io/projects/2018-06-30-building-boundaries-map.html'></iframe>
+<iframe width='100%' height='500px' frameBorder='0' src='http://etachov.io/projects/2018-06-30-building-boundaries-map.html'></iframe>
 <center><i>Explore the full screen map <a href = "http://etachov.io/projects/2018-06-30-building-boundaries-map.html" target = "_blank">here</a></i></center><br>
 
 Spend a few minutes exploring the map and you'll see (1) that Bing Maps team's results quite good and (2) there are still anomalies that demonstrate why this is such a hard problem. Notably, the two-step approach struggles with irregular buildings. 
@@ -29,12 +29,12 @@ Spend a few minutes exploring the map and you'll see (1) that Bing Maps team's r
 ![](/images/2018-06-30-building-boundaries-hud.gif?style=centerme)
 
 <br>
-<center><b>Watergate Hotel*</b></center>
-<center><i>The algo did a pretty good job on this one given the complexity.</i></center>
+<center><b>Watergate Hotel</b></center>
+<center><i>The algo did a decent job on this one given the complexity.</i></center>
 
 ![](/images/2018-06-30-building-boundaries-watergate.gif?style=centerme)
 
-Edge cases aside, these are incredibly promising results and boon for Open Street Map. I look forward to seeing if/when the Bing Maps team releases datasets for other countries. The data would be quite helpful for a number development sector problems from poverty estimation to disaster response.
+Edge cases aside, these are incredibly promising results and boon for projects like [Open Street Map](https://www.openstreetmap.org/). I look forward to seeing if/when the Bing Maps team releases datasets for other countries. Those data would be quite helpful for a number development and humanitarian problems from poverty estimation to disaster response.
 
 The code to download the Microsoft data and build the map is below. As an aside, I recently made the jump and switched my R spatial workflow over from sp to [sf](https://github.com/r-spatial/sf/). It's been great and I honestly haven't looked back once.
 

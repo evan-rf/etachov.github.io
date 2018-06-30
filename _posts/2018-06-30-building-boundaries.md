@@ -17,7 +17,7 @@ I plotted the building footprints around Mall in Washington, D.C. over satellite
 <iframe width='100%' height='500px' frameBorder='0' src='http://etachov.io/projects/2018-06-30-building-boundaries-map.html'></iframe>
 <center><i>Explore the full screen map <a href = "http://etachov.io/projects/2018-06-30-building-boundaries-map.html" target = "_blank">here</a></i></center><br>
 
-Spend a few minutes exploring the map and you'll see (1) that Bing Maps team's results quite good and (2) there are still anomalies that demonstrate why this is such a hard problem. Notably, the two-step approach struggles with irregular buildings. 
+Spend a few minutes exploring the map and you'll see (1) that the Bing Maps team's results are quite good and (2) there are still anomalies that demonstrate why this is such a hard problem. Notably, the two-step approach struggles with irregular buildings, especially those with curves.
 
 <br>
 <center><b>Hirshhorn Museum</b></center>
@@ -34,7 +34,7 @@ Spend a few minutes exploring the map and you'll see (1) that Bing Maps team's r
 
 ![](/images/2018-06-30-building-boundaries-watergate.gif?style=centerme)
 
-Edge cases aside, these are incredibly promising results and boon for projects like [Open Street Map](https://www.openstreetmap.org/). I look forward to seeing if/when the Bing Maps team releases datasets for other countries. Those data would be quite helpful for a number development and humanitarian problems from poverty estimation to disaster response.
+Edge cases aside, these are promising results and boon for projects like [Open Street Map](https://www.openstreetmap.org/). I look forward to seeing if/when the Bing Maps team releases datasets for other countries. Those data would be quite helpful for a number of development and humanitarian problems from poverty estimation to disaster response.
 
 The code to download the Microsoft data and build the map is below. As an aside, I recently made the jump and switched my R spatial workflow over from sp to [sf](https://github.com/r-spatial/sf/). It's been great and I honestly haven't looked back once.
 

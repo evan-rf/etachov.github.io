@@ -14,28 +14,31 @@ These footprints were derived using a [two-step process](https://github.com/Micr
 
 I plotted building footprints around Mall in Washington DC over satellite imagery for a quick visual inspection: 
 
-<iframe width='100%' height='700px' frameBorder='0' src='http://etachov.io/projects/2018-06-30-building-boundaries-map.html'></iframe>
+<iframe width='100%' height='600px' frameBorder='0' src='http://etachov.io/projects/2018-06-30-building-boundaries-map.html'></iframe>
 <center><i>Explore the full screen map <a href = "http://etachov.io/projects/2018-06-30-building-boundaries-map.html" target = "_blank">here</a></i></center><br>
 
 Spend a few minutes exploring the map and you'll see (1) that Bing Maps team's results quite good and (2) there are still anomalies that demonstrate why this is such a hard problem. Notably, the two-step approach struggles with irregular buildings. 
 
+
 **Hirshhorn Museum**
 
-![](/images/2018-06-30-building-boundaries-hirshhorn.gif)
+![](/images/2018-06-30-building-boundaries-hirshhorn.gif?style=centerme)
+
 
 **Department of Housing and Urban Development**
 
-![](/images/2018-06-30-building-boundaries-hud.gif)
+![](/images/2018-06-30-building-boundaries-hud.gif?style=centerme)
+
 
 **Watergate Hotel**
 
 The algo did a pretty good job on this one given the complexity.
 
-![](/images/2018-06-30-building-boundaries-watergate.gif)
+![](/images/2018-06-30-building-boundaries-watergate.gif?style=centerme)
 
-Edge cases aside, these are incredibly promising results and boon for Open Street Map. I'm looking forward to seeing if/when the Bing Maps team releases datasets for other countries. That data would be extremely helpful for a number development sector problems from poverty estimates to disaster response.
+Edge cases aside, these are incredibly promising results and boon for Open Street Map. I'm looking forward to seeing if/when the Bing Maps team releases datasets for other countries. The data would be quite helpful for a number development sector problems from poverty estimation to disaster response.
 
-The code to download and map the building footprints is below. As an aside, I recently made the jump and switched my R spatial workflow over from sp to the [sf](https://github.com/r-spatial/sf/). It's been great and I honestly haven't looked back once.
+The code to download the Microsoft data and build the map is below. As an aside, I recently made the jump and switched my R spatial workflow over from `sp` to  `[sf](https://github.com/r-spatial/sf/)`. It's been great and I honestly haven't looked back once.
 
 ``` r 
 library(tidyverse)
@@ -50,7 +53,7 @@ download.file(url_dc, "DistrictofColumbia.zip")
 unzip("DistrictofColumbia.zip")
 
 # read in building shapes
-dc_buildings <- st_read("/Users/evan/Dropbox/Projects/2018-q2-building-outlines/data/DistrictofColumbia.json") %>%
+dc_buildings <- st_read("DistrictofColumbia.json") %>%
   # reproject the file to ESPG 3857 (ugh) to match the mapview layer used below
   st_transform(., crs = 3857)
 

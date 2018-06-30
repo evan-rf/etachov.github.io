@@ -27,6 +27,11 @@ em img {
   margin-left: 0;
 }
 
+img[src$="centerme"] {
+  display:block;
+  margin: 0 auto;
+}
+
 body {
           box-sizing: border-box;
      -moz-box-sizing: border-box;

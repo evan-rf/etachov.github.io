@@ -51,9 +51,7 @@ download.file(url_dc, "DistrictofColumbia.zip")
 unzip("DistrictofColumbia.zip")
 
 # read in building shapes
-dc_buildings <- st_read("DistrictofColumbia.json") %>%
-  # reproject the file to ESPG 3857 (ugh) to match the mapview layer used below
-  st_transform(., crs = 3857)
+dc_buildings <- st_read("DistrictofColumbia.json")
 
 # use the tigris package to get the census tract shapefile
 options(tigris_class = "sf") # defaults to sp; manually set to sf

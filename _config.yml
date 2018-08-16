@@ -4,7 +4,7 @@ email:       etachov@gmail.com
 author:      Evan Tachovsky
 description: "Data Science, Visualization, International Development"
 baseurl:     ""
-url:         "http://etachov.github.io"
+url:         "https://etachov.github.io"
 date_format: "%b %-d, %Y"
 
 # Google services

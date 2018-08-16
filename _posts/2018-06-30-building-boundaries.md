@@ -14,8 +14,8 @@ These footprints were derived using a [two-step process](https://github.com/Micr
 
 I plotted the building footprints around Mall in Washington, D.C. over satellite imagery for a quick visual inspection: 
 
-<iframe width='100%' height='500px' frameBorder='0' src='http://etachov.io/projects/2018-06-30-building-boundaries-map.html'></iframe>
-<center><i>Explore the full screen map <a href = "http://etachov.io/projects/2018-06-30-building-boundaries-map.html" target = "_blank">here</a></i></center><br>
+<iframe width='100%' height='500px' frameBorder='0' src='https://etachov.io/projects/2018-06-30-building-boundaries-map.html'></iframe>
+<center><i>Explore the full screen map <a href = "https://etachov.io/projects/2018-06-30-building-boundaries-map.html" target = "_blank">here</a></i></center><br>
 
 Spend a few minutes exploring the map and you'll see (1) that the Bing Maps team's results are quite good and (2) there are still anomalies that demonstrate why this is such a hard problem. Notably, the two-step approach struggles with irregular buildings, especially those with curves.
 

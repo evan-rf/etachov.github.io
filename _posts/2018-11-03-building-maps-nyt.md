@@ -8,7 +8,7 @@ categories: spatial
 
 ![](/images/2018-10-28-glendale_az.png)
 
-Inspired by the *New York Times*' recent [map of every building in America](https://www.nytimes.com/interactive/2018/10/12/us/map-of-every-building-in-the-united-states.html) I wrote a quick chunk of R code to produce similar maps for selected zip codes using the same [data from Microsoft](https://etachov.io/spatial/2018/06/30/building-boundaries/). Thanks to some recent advances in the R geospatial ecosystem, i.e. the maturation of the `r sf` package and its integration with the `r tidyverse`, this was remarkably simple. 
+Inspired by the recent *New York Times* [map of every building in America](https://www.nytimes.com/interactive/2018/10/12/us/map-of-every-building-in-the-united-states.html) I wrote a quick chunk of R code to produce similar maps for selected zip codes using the same [data from Microsoft](https://etachov.io/spatial/2018/06/30/building-boundaries/). Thanks to some recent advances in the R geospatial ecosystem, i.e. the maturation of the `sf` package and its integration with the `tidyverse`, this was remarkably simple. 
 
 It's been fun to see others apapt the approach to map building in [Evanston, IL](https://twitter.com/hughbartling/status/1055670667209834504), [Boston, MA](https://twitter.com/andrwmllr/status/1056598521384747009), and a number of [cities in France](https://twitter.com/matamix/status/1052450295761051648).
 
@@ -19,7 +19,7 @@ library(sf)
 library(tigris)
 
 # start by picking a state from https://github.com/Microsoft/USBuildingFootprints
-# WARNING: these files can be pretty big. using arizona for its copious subdivisions and reasoanable 83MB.
+# WARNING: these files can be pretty big. using arizona for its copious subdivisions and reasonable 83MB.
 url_footprint <- "https://usbuildingdata.blob.core.windows.net/usbuildings-v1-1/Arizona.zip"
 download.file(url_footprint, "Arizona.zip")
 unzip("Arizona.zip")
@@ -52,7 +52,7 @@ ggsave("glendale_az.png", glendale, dpi = 400, width = 8, height = 5)
 
 ```
 
-This work also inspired me to go back and re-read [this great speech](https://lisacharlotterost.github.io/2016/10/21/mappoetry/) on Map Poetry from Charlotte Rost:
+This work also inspired me to re-read [Charlotte Rost's](https://twitter.com/lisacrost) great speech [on Map Poetry](https://lisacharlotterost.github.io/2016/10/21/mappoetry/):
 
 *When we look at a map of the world, we can’t see it as it is. We all lay an internal map of the world on top of the geographical one and only see what’s important to us. This internal map consists of memories & experience, associations, values, beliefs. It is incredible individual. There is no internal map that matches a second one. We all look at the same world differently. And we all look at the same maps differently, and sees different things; according to our internal map of the world. [...]*
 

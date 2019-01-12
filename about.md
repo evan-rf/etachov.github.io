@@ -4,7 +4,7 @@ title:
 permalink: /about/
 ---
 
-Hi my name is Evan and I work on data and machine learning at <a href = "https://www.rockefellerfoundation.org/" target = "_blank">The Rockefeller Foundation</a><a href = "https://www.atlasai.co" target = "_blank">.</a> Views expressed here are fully my own.
+Hi my name is Evan and I do and fund data science at <a href = "https://www.rockefellerfoundation.org/" target = "_blank">The Rockefeller Foundation</a><a href = "https://www.atlasai.co" target = "_blank">.</a> Views expressed here are fully my own.
 
 Right now I'm working on four personal projects: 
 

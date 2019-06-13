@@ -8,9 +8,9 @@ let yearsarray = [
   {'year': 2015,  'consumption': [] }
 ];
 
-var svg, key, width, height, yeargroup, viewportWidth = window.innerWidth, viewportHeight = window.innerHeight;
+var svg, key, width, height, yeargroup, viewportWidth = window.innerWidth, viewportHeight = window.innerHeight, pt;
 
-const margin = ({top: 100, right: 20, bottom: 40, left: 50});
+const margin = ({top: 75, right: 20, bottom: 40, left: 50});
 
 let x = d3.scaleLinear(), y = d3.scaleLinear()
     
@@ -31,8 +31,9 @@ let q3Line = d3.line()
     .x(d => x(d[0]))
     .y(d => y(d[1]))
 
-var colorScale = d3.scaleSequential(d3.interpolateRdPu)
-    .domain([2006,2015]);
+var colorScale = d3.scaleLinear()
+    .domain([2009, 2011, 2013 ,2015])
+    .range( ['#7ae8b6','#418FDE','#6399AE','#055459'] )
 
 //load the data and set width/height from the loaded DOM
 d3.csv('data/rural_customer_data_fig_7a.csv')
@@ -46,7 +47,7 @@ d3.csv('data/rural_customer_data_fig_7a.csv')
 
   width = d3.select("#chart").node().getBoundingClientRect().width;
   key_w = width * 0.28;
-  height = Math.min(width, (window.innerHeight -140) * 0.95);
+  height = (window.innerHeight -140) * 0.95;
 
   d3.select("#chart").style("height", height);
 
@@ -72,7 +73,7 @@ function drawCharts(yearsarray) {
 
   x.domain([0, 2+d3.max(yearsarray, d => (d.consumption.length)) ])
     .range([margin.left, width - margin.right]);
-  y.domain([0, d3.max(yearsarray.map(d => d3.max(d.consumption.map(d => d[1]) ) ) ) ])
+  y.domain([0, d3.max(yearsarray.map(d => d3.max(d.consumption.map(d => d[1] - 5) ) ) ) ])
     .range([height - margin.bottom, margin.top]);
 
   xAxis = d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0);
@@ -106,7 +107,7 @@ function drawCharts(yearsarray) {
   // Add an legend label.
 
   legendLabels = svg.append('g')
-    .attr("transform",`translate( ${margin.left*2}, -${margin.top*0.6})`)
+    .attr("transform",`translate( ${margin.left*1.8}, -${margin.top*0.8})`)
     .attr("id","legendLabels")
 
   legendLabels.append("text")
@@ -140,13 +141,13 @@ function drawCharts(yearsarray) {
 
   let chartlines = yeargroup.append("g").classed('lines', true);
 
-  chartlines.append('path')
-    .attr("fill",  d => colorScale(d.year) )
-    .attr('class', 'quartileArea')
-    .attr('fill-opacity',0)
-    .datum(d =>  d.consumption)
-    .attr("d", area)
-    .lower();
+  // chartlines.append('path')
+  //   .attr("fill",  d => colorScale(d.year) )
+  //   .attr('class', 'quartileArea')
+  //   .attr('fill-opacity',0)
+  //   .datum(d =>  d.consumption)
+  //   .attr("d", area)
+  //   .lower();
   
   chartlines.append("path")
     .attr("stroke",  function(d) { return colorScale(d.year); })
@@ -157,24 +158,25 @@ function drawCharts(yearsarray) {
 
   chartlines.append("path")
     .attr("stroke",  function(d) { return colorScale(d.year); })
-    .attr('class', 'q1Line hidden')
+    .attr('class', 'q1Line quartileLine')
     .datum(d =>  d.consumption)
-    .attr("d", q1Line)
-    .attr("stroke-dasharray", function() { return '0,' + this.getTotalLength(); });
+    .attr("d", q1Line)    
+    .style('opacity', 0);
 
   chartlines.append("path")
     .attr("stroke",  function(d) { return colorScale(d.year); })
-    .attr('class', 'q3Line hidden')
+    .attr('class', 'q3Line quartileLine')
     .datum(d =>  d.consumption)
     .attr("d", q3Line)
-    .attr("stroke-dasharray", function() { return '0,' + this.getTotalLength(); });
+    .style('opacity', 0);
 
   let keygroup = yeargroup.append('g')
     .attr('class', 'keygroup')
     .attr('width', key_w)  
     .attr("transform", (d,i) =>
-      `translate(${margin.left+12}, ${-margin.top*0.6 + 78 + 16*(i)})`)
-    .on('mouseover', showYear).on('mouseout',showAll)
+      `translate(${margin.left}, ${-margin.top*0.8 + 78 + 16*(i)})`)
+    .on('mouseover', showYear)
+    .on('mouseout', showAll)
     .raise();
 
   keygroup.append("text")
@@ -204,26 +206,51 @@ function drawCharts(yearsarray) {
 
 function showYear(d) { 
   let selector = `.year_${d.year}`;
+  clearTimeout(pt);
   d3.selectAll('.yeargroup').classed('active', false);
+
+  d3.select("#clickOverlay").style("visibility", "hidden");
   //add active class to highlighted key group
   // d3.select(this).classed('active', true);
   //add active class to highlighted median line
   d3.selectAll(selector).classed('active', true);
-  d3.selectAll('path.quartileArea.visible')
-        .transition()
-          .duration(500)
-          .attr('fill-opacity', 0.1);
+  d3.selectAll(selector).selectAll("path.quartileLine")
+    .transition()
+    .duration(250)
+    .style("opacity", 1);
 }
 
 function showAll(d) { 
   let selector = `.year_${d.year}`;
+
   d3.selectAll('.active').classed('active', false);
+  d3.selectAll(selector).selectAll("path.quartileLine")
+    .transition()
+    .duration(250)
+    .style("opacity", 0.25);
+
+  pt = setTimeout( function() { d3.select("#clickOverlay").style("visibility", "visible"); }, 1000);
+}
+
+function hideYearGroup(indexArray) { 
+  d3.selectAll('.active').classed('active', false);
+  let target = yeargroup.filter((d,i) => (indexArray.indexOf(i) > -1) );
+
+  target.selectAll('path.medianLine')
+    .attr("stroke-dasharray", function() { return '0,' + this.getTotalLength(); });
+
+  target.selectAll('path.quartileLine')
+    .style('opacity', 0);
+    
+  target.selectAll('g.keygroup').classed('visible',false);
+
 }
 
 function animateYearGroup(indexArray) {
   yeargroup  
     .filter((d,i) => (indexArray.indexOf(i) > -1) )
-    .transition().delay( (d,i) => { return (i+1)*800 })
+    .transition()
+      .delay( (d,i) => { return (i+1)*800 })
       .ease(d3.easeLinear)
       .on("start", function() {
         let c = d3.select(this).attr('class').split(' ')[1];
@@ -231,33 +258,36 @@ function animateYearGroup(indexArray) {
         
         d3.select(this).select('g.keygroup').classed('visible',true);
 
-        d3.select(this).select('path.quartileArea').classed('visible',true);
-
-        d3.select(this).classed('active',true);
-
-        // d3.active(this).select('path.quartileArea')
-        //   .transition()
-        //     .duration( function(d) { return 500 - (120-d.consumption.length); })
-        //     .attr('fill-opacity', 0.2)
-
         d3.active(this).select('g.lines path.medianLine')
           .transition()
             .duration( function(d) {return 500 - (120-d.consumption.length); }) 
              // shorter lines have shorter animations
             .attrTween("stroke-dasharray", tweenDash);
 
-        d3.active(this).select('g.lines path.q1Line')
+        d3.active(this).selectAll('path.quartileLine')
+          
           .transition()
-            .duration( function(d) {return 500 - (120-d.consumption.length); })
-            .attr('opacity',1)
-            .attr('class','q1Line');
+            .duration( function(d) {console.log(d); return 500 - (120-d .length); })
+            .style('opacity', 0.25);
 
-        d3.active(this).select('g.lines path.q3Line')
-          .transition()
-            .duration( function(d) {return 500 - (120-d.consumption.length); })
-            .attr('opacity',1)
-            .attr('class','q3Line'); 
+        // d3.active(this).select('g.lines path.q3Line')
+        //   .transition()
+        //     .duration( function(d) {return 500 - (120-d.consumption.length); })
+        //     .attr('opacity',1)
+        //     .attr('class','q3Line quartileLine');
+
       });
+
+  if (indexArray.length > 1) { 
+    window.setTimeout( showReplayButton, indexArray.length * 800 + 1000);  
+  }
+}
+
+function showReplayButton() {
+  d3.select('div#clickOverlay')
+    .html('REPLAY ▶')
+    .style("visibility","visible")
+    .on('click', () => hideYearGroup([1,2,3,4,5,6]) )
 }
 
 function tweenDash() {
@@ -273,7 +303,7 @@ function scrollInit() {
 
   document.getElementById("clickOverlay").addEventListener("click", function(e) {  
 
-    if (document.getElementById("clickOverlay")) { d3.select('div#clickOverlay').remove(); }
+    if (document.getElementById("clickOverlay")) { d3.select('div#clickOverlay').style("visibility","hidden"); }
 
     d3.select("g#legendLabels").append("text")
       .attr("class", "legendlabel")

@@ -114,7 +114,7 @@ function drawCharts(yearsarray) {
     .attr("class", "legendlabel")
     .attr("text-anchor", "start")
     .attr('x', 36).attr('y', 40)
-    .text('Year of connection:')
+    .text('Each line represents the year customers connected to the grid')
 
   legendLabels.append("text")
     .attr("class", "smalllegendlabel")
